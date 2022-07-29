@@ -16,3 +16,11 @@ roslaunch mybot mybot.launch
 ```
 5. The models should be present in ./gazebo/models (check hidden directories to get the gazebo directory)
 6. In gazebo the models should be available in the model insert tab 
+
+## Launching the aruco detection script
+
+In the scripts directory, lanunch the script with python open_cv_demo_ros.py
+
+##Camera Calliberation
+
+Spawn the checkerboard model and run the calliberation script
