@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/aditya/catkin_ws/src/learn-ros/using-gazebo-camera/devel/setup.sh

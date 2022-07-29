@@ -1,0 +1,2 @@
+mybot
+-DCATKIN_DEVEL_PREFIX=/home/aditya/catkin_ws/src/learn-ros/using-gazebo-camera/devel -DCMAKE_INSTALL_PREFIX=/home/aditya/catkin_ws/src/learn-ros/using-gazebo-camera/install -G Unix Makefiles
