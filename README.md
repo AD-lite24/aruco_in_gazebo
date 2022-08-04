@@ -21,7 +21,8 @@ Note: This is just for demonstration, launch any bot or camera configuration nee
 ## Launching the aruco detection script
 
 In the scripts directory, launch the script with `python open_cv_demo_ros.py`
-Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic list` to get a list of topics
+Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic list` to get a list of topics.
+Use the ros2 script for ros2. Update the aruco dict and the mtx and dist values from the calibration data.
 
 ## Camera Calliberation
 
