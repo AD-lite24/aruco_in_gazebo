@@ -25,6 +25,10 @@ Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic 
 
 ## Camera Calliberation
 
+###Installing the packages
+
+#### For ros
+
 Run the following command in your terminal.
 `$ rosdep install camera_calibration`
 
@@ -32,6 +36,25 @@ Run the calibration node using the following script
 `rosrun camera_calibration cameracalibrator.py --size <shape of checkerboard eg. 8x6)> --square <Size of individual square in meters> image:=<topic to which the camera is publishing to (will most likely end with image_raw)> camera:=<camera name(will most likely end with/camera)>`
 
 The caliberation window will then open up. If the everything was done right you should see the scan value on the terminal as well colored markings on the board. 
+
+#### For ros2
+
+Run the following commands
+```
+sudo apt install ros-<ros2-distro>-camera-calibration-parsers
+
+sudo apt install ros-<ros2-distro>-camera-info-manager
+
+sudo apt install ros-<ros2-distro>-launch-testing-ament-cmake
+
+```
+Image Pipeline need to be built from source in your workspace with:
+`git clone – b <ros2-distro> git@github.com:ros-perception/image_pipeline.git`
+
+To start calibration run 
+`ros2 run camera_calibration cameracalibrator --size <checkerboard pattern> --square <square side length in meters> --ros-args -r image:=<raw image topic>-p camera:=<camera name eg. /my_camera>`
+
+### Getting the data
 
 To get all the calibration data required, use the following positions to place your boards in:
 - checkerboard on the camera's left, right, top and bottom of field of view
@@ -43,5 +66,10 @@ To get all the calibration data required, use the following positions to place y
 
 As you move the checkerboard around you will see three bars on the calibration sidebar increase in length. When the CALIBRATE button lights, you have enough data for calibration and can click CALIBRATE to see the results.
 
-After the calibration is complete you will see the calibration results in the terminal and the calibrated image in the calibration window
+After the calibration is complete you will see the calibration results in the terminal and the calibrated image in the calibration window and the save and commit buttons light up. 
 
+Press the save button to see the result. Data is saved to “/tmp/calibrationdata.tar.gz”
+
+To use the the calibration file unzip the calibration.tar.gz `tar -xvf calibration.tar.gz`
+
+In the folder images used for calibration are available and also “ost.yaml” and “ost.txt”. You can use the yaml file which contains the calibration parameters as directed by the camera driver.
