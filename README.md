@@ -25,4 +25,23 @@ Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic 
 
 ## Camera Calliberation
 
-Spawn the checkerboard model and run the calliberation script. The model can be spawned using the same script mentioned above, just do the math for the square sizes. 
+Run the following command in your terminal.
+`$ rosdep install camera_calibration`
+
+Run the calibration node using the following script
+`rosrun camera_calibration cameracalibrator.py --size <shape of checkerboard eg. 8x6)> --square <Size of individual square in meters> image:=<topic to which the camera is publishing to (will most likely end with image_raw)> camera:=<topic of your camera (will most likely end with/camera)>`
+
+The caliberation window will then open up. If the everything was done right you should see the scan value on the terminal as well colored markings on the board. 
+
+To get all the calibration data required, use the following positions to place your boards in:
+- checkerboard on the camera's left, right, top and bottom of field of view
+  -X bar - left/right in field of view
+  -Y bar - top/bottom in field of view
+  - Size bar - toward/away and tilt from the camera
+- checkerboard filling the whole field of view
+- checkerboard tilted to the left, right, top and bottom (Skew)
+
+As you move the checkerboard around you will see three bars on the calibration sidebar increase in length. When the CALIBRATE button lights, you have enough data for calibration and can click CALIBRATE to see the results.
+
+After the calibration is complete you will see the calibration results in the terminal and the calibrated image in the calibration window
+
