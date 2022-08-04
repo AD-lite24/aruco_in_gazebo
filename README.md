@@ -20,7 +20,7 @@ Note: This is just for demonstration, launch any bot or camera configuration nee
 
 ## Launching the aruco detection script
 
-In the scripts directory, lanunch the script with python open_cv_demo_ros.py
+In the scripts directory, launch the script with `python open_cv_demo_ros.py`
 
 ## Camera Calliberation
 
