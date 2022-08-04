@@ -22,6 +22,6 @@ Note: This is just for demonstration, launch any bot or camera configuration nee
 
 In the scripts directory, lanunch the script with python open_cv_demo_ros.py
 
-##Camera Calliberation
+## Camera Calliberation
 
-Spawn the checkerboard model and run the calliberation script
+Spawn the checkerboard model and run the calliberation script. The model can be spawned using the same script mentioned above, just do the math for the square sizes. 
