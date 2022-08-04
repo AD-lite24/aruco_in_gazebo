@@ -35,8 +35,8 @@ The caliberation window will then open up. If the everything was done right you 
 
 To get all the calibration data required, use the following positions to place your boards in:
 - checkerboard on the camera's left, right, top and bottom of field of view
-  -X bar - left/right in field of view
-  -Y bar - top/bottom in field of view
+  - X bar - left/right in field of view
+  - Y bar - top/bottom in field of view
   - Size bar - toward/away and tilt from the camera
 - checkerboard filling the whole field of view
 - checkerboard tilted to the left, right, top and bottom (Skew)
