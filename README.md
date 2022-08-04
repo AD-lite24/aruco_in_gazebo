@@ -6,6 +6,7 @@ Run the following command
 ```
 roslaunch mybot mybot.launch
 ```
+Note: This is just for demonstration, launch any bot or camera configuration needed
 ## Generating aruco tags in gazebo simulation 
 
 1. Navigate to the Gazebo_models directory 
