@@ -1,6 +1,6 @@
 # Aruco tags in Gazebo simulation
 
-## Launching the bot 
+## Launching the bot (optional) 
 
 Run the following command
 ```
