@@ -6,7 +6,7 @@ Run the following command
 ```
 roslaunch mybot mybot.launch
 ```
-Note: This is just for demonstration, launch any bot or camera configuration needed. Package may not always work for whatever reason so using a camera known to work is recommended. Use the scripts folder in your package to make it work with your camera.
+Note: This is just for demonstration, launch any bot or camera configuration needed. Package may not always work for whatever reason so using a camera known to work on your system is recommended. Use the scripts folder in your package to make it work with your camera.
 ## Generating aruco tags in gazebo simulation 
 
 1. Navigate to the Gazebo_models directory 
@@ -74,3 +74,4 @@ Press the save button to see the result. Data is saved to “/tmp/calibrationdat
 To use the the calibration file unzip the calibration.tar.gz `tar -xvf calibration.tar.gz`
 
 In the folder images used for calibration are available and also “ost.yaml” and “ost.txt”. You can use the yaml file which contains the calibration parameters as directed by the camera driver.
+The same package and process can and is used to calibrate real life cameras as well, just edit the rostopics as required.
