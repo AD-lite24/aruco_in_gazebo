@@ -18,6 +18,8 @@ Note: This is just for demonstration, launch any bot or camera configuration nee
 5. The models should be present in ./gazebo/models (check hidden directories to get the gazebo directory)
 6. In gazebo the models should be available in the model insert tab 
 
+Credit to @mikaelaguerdas for the generator script
+
 ## Launching the aruco detection script
 
 In the scripts directory, launch the script with `python open_cv_demo_ros.py`
