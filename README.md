@@ -24,7 +24,7 @@ Credit to @mikaelaguerdas for the generator script
 
 In the scripts directory, launch the script with `python open_cv_demo_ros.py`
 Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic list` to get a list of topics.
-Use the ros2 script for ros2. Update the aruco dict and the mtx and dist values from the calibration data.
+Use the ros2 script if you are using ros2. Update the aruco dict and the mtx and dist values from the calibration data.
 
 ## Camera Calliberation
 
@@ -38,7 +38,7 @@ Run the following command in your terminal.
 Run the calibration node using the following script
 `rosrun camera_calibration cameracalibrator.py --size <shape of checkerboard eg. 8x6)> --square <Size of individual square in meters> image:=<topic to which the camera is publishing to (will most likely end with image_raw)> camera:=<camera name(will most likely end with/camera)>`
 
-The caliberation window will then open up. If the everything was done right you should see the scan value on the terminal as well colored markings on the board. 
+The caliberation window will then open up. If the everything was done right you should see the scan value on the terminal as well colored calibration markings on the board. 
 
 #### For ros2
 
