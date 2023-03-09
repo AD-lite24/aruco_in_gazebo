@@ -39,6 +39,7 @@ Run the calibration node using the following script
 `rosrun camera_calibration cameracalibrator.py --size <shape of checkerboard eg. 8x6)> --square <Size of individual square in meters> image:=<topic to which the camera is publishing to (will most likely end with image_raw)> camera:=<camera name(will most likely end with/camera)>`
 
 The caliberation window will then open up. If the everything was done right you should see the scan value on the terminal as well colored calibration markings on the board. 
+<img width="844" alt="Screenshot 2022-08-01 at 9 47 52 PM" src="https://user-images.githubusercontent.com/96363931/224107699-8c36f357-41b3-42f0-9dae-ab18088af356.png">
 
 #### For ros2
 
