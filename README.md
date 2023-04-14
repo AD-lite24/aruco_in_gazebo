@@ -24,6 +24,13 @@ Credit to @mikaelaguerdas for the generator script
 
 ## Launching the aruco detection script
 
+### Dependancies for this part
+
+1. Python 3.x
+2. Numpy
+3. OpenCV 3.3+
+4. OpenCV 3.3+ Contrib modules
+
 In the scripts directory, launch the script with `python open_cv_demo_ros.py`
 Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic list` to get a list of topics.
 Use the ros2 script if you are using ros2. Update the aruco dict and the mtx and dist values from the calibration data.
