@@ -26,10 +26,10 @@ Credit to @mikaelaguerdas for the generator script
 
 ### Dependancies for this part
 
-1. Python 3.x
-2. Numpy
-3. OpenCV 3.3+
-4. OpenCV 3.3+ Contrib modules
+* Python 3.x
+* Numpy
+* OpenCV 3.3+
+* OpenCV 4.6 Contrib modules (`pip install opencv-contrib-python==4.6.0.66`)
 
 In the scripts directory, launch the script with `python open_cv_demo_ros.py`
 Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic list` to get a list of topics.
