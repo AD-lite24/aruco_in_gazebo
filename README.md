@@ -9,6 +9,8 @@ roslaunch mybot mybot.launch
 Note: This is just for demonstration, launch any bot or camera configuration needed. Package may not always work for whatever reason so using a camera known to work on your system is recommended. Use the scripts folder with your package. Rememeber, I warned you!
 ## Generating aruco tags in gazebo simulation 
 
+Use this link to generate the tags: https://chev.me/arucogen/
+
 1. Navigate to the Gazebo_models directory 
 2. In the images folder add the .png images for the ar tags required. Note that they have to be resized to dimensions 170*170 px
 3. Run the following command
