@@ -17,7 +17,7 @@ Use this link to generate the tags: https://chev.me/arucogen/
 ```
 ./generate_markers_model.py -i <path to the image directory> -s <size of the model in mm> -w <white contour aroud the images; put 0 if not required>
 ```
-5. The models should be present in ./gazebo/models (check hidden directories to get the gazebo directory)
+5. The models should be present in ./gazebo/models (check hidden directories to get the gazebo directory (press ctrl h))
 6. In gazebo the models should be available in the model insert tab 
 
 Credit to @mikaelaguerdas for the generator script
