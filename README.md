@@ -25,6 +25,7 @@ Use this link to generate the tags: https://chev.me/arucogen/
 ./generate_markers_model.py -i <path to the image directory> -s <size of the model in mm> -w <white contour aroud the images; put 0 if not required>
 ```
 (example : `./generate_markers_model.py -i ~/robocon/gazebo_models/ar_tags/images -s 100 -w 0`)
+
 5. The models should be present in ./gazebo/models (check hidden directories to get the gazebo directory (press ctrl h)). This should be in your home folder.
 6. In gazebo the models should be available in the model insert tab. Insert the model and place it in front of your robot's camera (optional).
 
@@ -41,7 +42,9 @@ Credit to @mikaelaguerdas for the generator script
 
 In the aruco_in_gazebo/scripts directory, launch the script with `python open_cv_demo_ros.py`
 Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic list` to get a list of topics.
+
 If you used the bot linked above, you may replace it by `sub_image = rospy.Subscriber("/atom/camera/rgb/image_raw", Image, image_callback)`
+
 Use the ros2 script if you are using ros2. Update the aruco dict and the mtx and dist values from the calibration data.
 
 ## Camera Calliberation
