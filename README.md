@@ -43,6 +43,8 @@ Credit to @mikaelaguerdas for the generator script
 In the aruco_in_gazebo/scripts directory, launch the script with `python open_cv_demo_ros.py`
 Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic list` to get a list of topics.
 
+Ensure you are setting the correct dictionary size needed in the script (see open_cv_demo_ros.py)
+
 If you used the bot linked above, you may replace it by `sub_image = rospy.Subscriber("/atom/camera/rgb/image_raw", Image, image_callback)`
 
 Use the ros2 script if you are using ros2. Update the aruco dict and the mtx and dist values from the calibration data.
