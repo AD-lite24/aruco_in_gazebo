@@ -6,19 +6,28 @@ Run the following command
 ```
 roslaunch mybot mybot.launch
 ```
-Note: This is just for demonstration, launch any bot or camera configuration needed. Package may not always work for whatever reason so using a camera known to work on your system is recommended. Use the scripts folder with your package. Rememeber, I warned you!
+
+If you don't have a bot already, you may use this: 
+https://github.com/harshmittal2210/Robotics_ws#atom-robot-sdf
+and run the following command 
+```roslaunch atom world.launch```
+Note: Here is the guide for the aformentioned bot: http://www.harshmittal.co.in/tutorials/Custom-Robot-ROS/
+
+
 ## Generating aruco tags in gazebo simulation 
 
 Use this link to generate the tags: https://chev.me/arucogen/
 
-1. Navigate to the Gazebo_models directory 
+1. Navigate to the aruco_in_gazebo/gazebo_models/ar_tags directory 
 2. In the images folder add the .png images for the ar tags required. Note that they have to be resized to dimensions 170*170 px
-3. Run the following command
+3. Run the following command(the python file is in the aruco_in_gazebo/gazebo_models/ar_tags/scripts/ directory)
 ```
 ./generate_markers_model.py -i <path to the image directory> -s <size of the model in mm> -w <white contour aroud the images; put 0 if not required>
 ```
-5. The models should be present in ./gazebo/models (check hidden directories to get the gazebo directory (press ctrl h))
-6. In gazebo the models should be available in the model insert tab 
+(example : `./generate_markers_model.py -i ~/robocon/gazebo_models/ar_tags/images -s 100 -w 0`)
+
+5. The models should be present in ./gazebo/models (check hidden directories to get the gazebo directory (press ctrl h)). This should be in your home folder.
+6. In gazebo the models should be available in the model insert tab. Insert the model and place it in front of your robot's camera (optional).
 
 Credit to @mikaelaguerdas for the generator script
 
@@ -31,8 +40,11 @@ Credit to @mikaelaguerdas for the generator script
 * OpenCV 3.3+
 * OpenCV 4.6 Contrib modules (`pip install opencv-contrib-python==4.6.0.66`)
 
-In the scripts directory, launch the script with `python open_cv_demo_ros.py`
+In the aruco_in_gazebo/scripts directory, launch the script with `python open_cv_demo_ros.py`
 Edit the rostopic to whatever topic your camera is publishing to. Use `rostopic list` to get a list of topics.
+
+If you used the bot linked above, you may replace it by `sub_image = rospy.Subscriber("/atom/camera/rgb/image_raw", Image, image_callback)`
+
 Use the ros2 script if you are using ros2. Update the aruco dict and the mtx and dist values from the calibration data.
 
 ## Camera Calliberation
