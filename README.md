@@ -8,9 +8,13 @@ roslaunch mybot mybot.launch
 ```
 
 If you don't have a bot already, you may use this: 
+
 https://github.com/harshmittal2210/Robotics_ws#atom-robot-sdf
+
 and run the following command 
+
 ```roslaunch atom world.launch```
+
 Note: Here is the guide for the aformentioned bot: http://www.harshmittal.co.in/tutorials/Custom-Robot-ROS/
 
 
@@ -57,6 +61,9 @@ Use the ros2 script if you are using ros2. Update the aruco dict and the mtx and
 
 Run the following command in your terminal.
 `$ rosdep install camera_calibration`
+Here is the guide: http://library.isr.ist.utl.pt/docs/roswiki/camera_calibration(2f)Tutorials(2f)MonocularCalibration.html
+
+Documentation: http://wiki.ros.org/camera_calibration
 
 Run the calibration node using the following script
 `rosrun camera_calibration cameracalibrator.py --size <shape of checkerboard eg. 8x6)> --square <Size of individual square in meters> image:=<topic to which the camera is publishing to (will most likely end with image_raw)> camera:=<camera name(will most likely end with/camera)>`
